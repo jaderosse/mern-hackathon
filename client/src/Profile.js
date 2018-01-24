@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import InsertShoes from './layout/Shoes/InsertShoes.js';
 class Profile extends Component {
 
   weatherCheck = (e) => {
@@ -9,11 +9,13 @@ class Profile extends Component {
   } 
 
   render(){
+
     if(this.props.user && this.props.user.name){
       return (<div>
           <h2>HELLO AGAIN {this.props.user.name}!</h2>
           <h4>Your email is {this.props.user.email}</h4>
           <h3>Your location: {this.props.user.location}</h3>
+          <InsertShoes />
         </div>);
     }
     else {
