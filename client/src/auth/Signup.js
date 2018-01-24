@@ -8,7 +8,8 @@ class Signup extends Component {
     this.state = {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      location: ''
     }
   }
 
@@ -21,13 +22,17 @@ class Signup extends Component {
   handlePasswordChange = (e) => {
     this.setState({password: e.target.value})
   }
+  handleLocationChange = (e) => {
+    this.setState({location: e.target.value})
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
     axios.post('/auth/signup', {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      location: this.state.location
     }).then(result => {
       localStorage.setItem('mernToken', result.data.token);
       this.props.updateUser();
@@ -63,6 +68,13 @@ class Signup extends Component {
                      type="password"
                      value={this.state.password}
                      onChange={this.handlePasswordChange} />
+                 </div>
+                  <div>
+                  <input name="Location"
+                     placeholder="Location(city)"
+                     type="text"
+                     value={this.state.location}
+                     onChange={this.handleLocationChange} />
                  </div>
                  <input type="submit" value="Sign up!" className="btn-primary" />
               </form>);

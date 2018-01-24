@@ -54,7 +54,8 @@ router.post('/signup', function(req, res, next) {
       User.create({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        location: req.body.location
       }, function(err, user) {
         if (err){
           console.log('DB error', err);
