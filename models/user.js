@@ -23,8 +23,17 @@ var userSchema = new mongoose.Schema({
   },
   location: {
     type: String,
-    required: true,
-  }
+    required: true
+  },
+  shoes: [
+    {
+    id: Number,
+    comfort: Number,
+    waterproof: Boolean,
+    type: String,
+    imgUrl: String
+    },
+  ]
 });
 
 // Override 'toJSON' to prevent the password from being returned with the user
@@ -33,7 +42,9 @@ userSchema.set('toJSON', {
     var returnJson = {
       id: ret._id,
       email: ret.email,
-      name: ret.name
+      name: ret.name,
+      location: ret.location,
+      shoes: ret.shoes
     };
     return returnJson;
   }
