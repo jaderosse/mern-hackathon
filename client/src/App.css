@@ -16,6 +16,12 @@ nav a:hover {
   color: #7f4dd2;
 }
 
+.wardrobe {
+  height: 100%;
+  width: 20%;
+  background-color: #777;
+}
+
 .footer {
   background-color: #555;
   position: absolute;

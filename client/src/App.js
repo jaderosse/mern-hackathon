@@ -10,6 +10,8 @@ import Login from './auth/Login.js';
 import Profile from './Profile.js';
 import Signup from './auth/Signup.js';
 
+import Wardrobe from './layout/Wardrobe.js';
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -77,6 +79,7 @@ class App extends Component {
         <Router>
           <div>
             <Nav user={this.state.user} />
+            <Wardrobe />
             <div className="space">
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               <Route exact path="/" component={Home} />
