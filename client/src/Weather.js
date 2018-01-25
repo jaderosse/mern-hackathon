@@ -4,7 +4,8 @@ class Weather extends Component {
   constructor(props){
     super(props);
     this.state = {
-      temp: ''
+      temp: '',
+      condition: ''
     }
   }
 
@@ -21,23 +22,39 @@ class Weather extends Component {
         return response.json()
       }).then((json) => {
         this.setState({temp: json.main.temp});
+        this.setState({condition: json.weather[0].main});
       }).catch((error) => {
         console.log('error', error);
       });
   }
 
   shoeCheck = () => {
-    if(this.state.temp > 50){
-      console.log('so cold!');
+    if(this.state.temp < 283 || (this.state.condition).includes("rain") ){
+      console.log('return boot');
     } else {
-      console.log('sandals it is!');
+      console.log('return sandal');
     }
   }
 
+    // shoeCheck = () => {
+  //   if(this.state.temp < 283 || (this.state.condition = "rain") ){
+  //     const coldShoe = this.props.user.shoes.map((item) => {
+  //       console.log(item.shoe_type);
+  //       if(item.shoe_type = 'boot'){
+  //         return <Shoe shoe={item} />
+  //       }
+  //     });
+  //   } else {
+  //     console.log('pretty warm');
+  //   }
+  // }
+
   render(){
     return (
-      // <h1>Temp: {this.state.temp}</h1>
-      <h1>{Math.round(this.state.temp* 9/5 - 459.67)} °F</h1>
+      <div>
+        <h1>Temperature: {Math.round(this.state.temp* 9/5 - 459.67)} °F</h1>
+        <h1>Conditions: {this.state.condition}</h1>
+      </div>
     )
   }
 }

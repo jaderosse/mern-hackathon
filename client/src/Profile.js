@@ -9,10 +9,9 @@ class Profile extends Component {
   
     if(this.props.user && this.props.user.name){
       return (<div>
-          <h2>HELLO AGAIN {this.props.user.name}!</h2>
-          <h4>Your email is {this.props.user.email}</h4>
-          <h3>Your location: {this.props.user.location}</h3>
-          <Weather user={this.props.user}/>
+          <h2>Welcome Back {this.props.user.name}!</h2>
+          <p>Today in {this.props.user.location}:</p>
+          <Weather user={this.props.user} shoeType={this.props.user.shoes.shoe_type} />
           
           <InsertShoes user={this.props.user}/>
           <ShoesCollection shoes={this.props.user.shoes}/>

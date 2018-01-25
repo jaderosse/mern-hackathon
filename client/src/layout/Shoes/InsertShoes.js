@@ -36,13 +36,46 @@ class InsertShoes extends Component{
 	render(){
 		return(
 			<div>
-				<form onSubmit={this.handleSubmit}>
-
-					<input type="text" name="id" value={this.state.id} onChange={this.handleChange} placeholder="Shoes Name"></input>
-					<input type="text" name="comfort" value={this.state.comfort} onChange={this.handleChange} placeholder="1-10 How comfy?"></input>
-					<input type="text" name="waterproof" value={this.state.waterproof} onChange={this.handleChange} placeholder="true/false"></input>
-					<input type="text" name="shoe_type" value={this.state.shoe_type} onChange={this.handleChange} placeholder="boots, sandals,  moccasins"></input>
-					<input type="text" name="imgUrl" value={this.state.imgUrl} onChange={this.handleChange} placeholder="Link to image of shoes"></input>
+				<form className="shoe-form" onSubmit={this.handleSubmit}>
+					<label>Shoes Name</label>
+					<input type="text" name="id" value={this.state.id} onChange={this.handleChange} placeholder="ex 'red pumps'"></input>
+					<br />
+					<label>Comfort Level</label>
+					<select name="comfort" value={this.state.comfort} onChange={this.handleChange}>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+					<br />
+					{/*<input type="text" name="comfort" value={this.state.comfort} onChange={this.handleChange} placeholder="1-10 How comfy?"></input>*/}
+					{/*<input type="text" name="waterproof" value={this.state.waterproof} onChange={this.handleChange} placeholder="true/false"></input>*/}
+					<label>Waterproof?</label>
+					<select name="waterproof" value={this.state.waterproof} onChange={this.handleChange}>
+						<option value="true">Yes</option>
+						<option value="false">No</option>
+					</select>
+					<br />
+					<label>Shoe Type</label>
+					<select name="shoe_type" value={this.state.shoe_type} onChange={this.handleChange}>
+						<option>Boots</option>
+						<option>Tennis Shoes</option>
+						<option>Heels</option>
+						<option>Dress Shoes</option>
+						<option>Sandals</option>
+						<option>Hiking Boots</option>
+					</select>
+					<br />
+					{/*<input type="text" name="shoe_type" value={this.state.shoe_type} onChange={this.handleChange} placeholder="boots, sandals,  moccasins"></input>*/}
+					<label>Link to image</label>
+					<input type="text" name="imgUrl" value={this.state.imgUrl} onChange={this.handleChange} placeholder="image url"></input>
+					<br />
 					<input type="submit" />
 				</form>
 
