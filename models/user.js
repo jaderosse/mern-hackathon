@@ -27,13 +27,14 @@ var userSchema = new mongoose.Schema({
   },
   shoes: [
     {
-    id: Number,
-    comfort: Number,
-    waterproof: Boolean,
-    type: String,
-    imgUrl: String
-    },
+      id: String,
+      comfort: String,
+      waterproof: Boolean,
+      shoe_type: String,
+      imgUrl: String
+    }
   ]
+  
 });
 
 // Override 'toJSON' to prevent the password from being returned with the user

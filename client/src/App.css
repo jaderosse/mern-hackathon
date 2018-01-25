@@ -16,6 +16,11 @@ nav a:hover {
   color: #7f4dd2;
 }
 
+.single-shoe > img {
+  height: 200px;
+  width: 200px;
+}
+
 .footer {
   background-color: #555;
   position: absolute;
