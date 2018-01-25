@@ -28,7 +28,7 @@ router.get('/', function(req, res){
 // });	
 	router.post('/', function(req, res, next) {
     console.log('user:', req.body.user);
-    console.log('id:', req.body.shoe_id);
+    console.log('id:', req.body);
     res.send('post');
   // check header or url parameters or post parameters for token
   // var token = req.body.token || req.query.token;
