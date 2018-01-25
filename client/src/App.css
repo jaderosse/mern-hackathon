@@ -1,4 +1,13 @@
 /* CUSTOM STYLES */
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
 nav {
   width: 100%;
   background-color: #555;
@@ -21,6 +30,21 @@ nav a:hover {
   width: 200px;
 }
 
+.sidebar {
+  height: 100%;
+  width: 20%;
+  background-color: #777;
+  text-decoration: none;
+  color: #4ff;
+}
+
+.space {
+  margin: 15px 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 80%;
+}
+
 .footer {
   background-color: #555;
   position: absolute;
@@ -32,10 +56,6 @@ nav a:hover {
 .footer-text {
   color: #fff;
   font-size: 10px;
-}
-
-.space {
-  margin: 15px 0;
 }
 
 .btn-primary {
