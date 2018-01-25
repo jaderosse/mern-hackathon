@@ -10,7 +10,7 @@ class ShoesCollection extends Component {
     })
 
     return (
-      <div>
+      <div className="shoe-collection">
         <ul>{allShoes}</ul>
         <p>This is a test</p>
       </div>
