@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        <Router> 
           <div>
             <Nav user={this.state.user} />
             <div className="space">

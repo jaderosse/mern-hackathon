@@ -4,7 +4,7 @@ class Shoe extends Component {
   render(){
     return (
       <li>
-       
+        
       </li>
     )
   }
