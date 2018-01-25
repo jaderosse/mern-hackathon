@@ -27,7 +27,7 @@ class Profile extends Component {
   }
 
   shoeCheck = () => {
-    if(this.state.temp > 50){
+    if(this.state.temp > 283){
       console.log('so cold!');
     } else {
       console.log('sandals it is!');
@@ -42,7 +42,7 @@ class Profile extends Component {
           <h4>Your email is {this.props.user.email}</h4>
           <h3>Your location: {this.props.user.location}</h3>
           <h3>Your shoes: {this.props.user.shoes}</h3>
-          <h1>Temp: {this.state.temp}</h1>
+          <h1>Temp: {Math.round(this.state.temp* 9/5 - 459.67)} °F</h1>
           <InsertShoes />
         </div>);
     }
