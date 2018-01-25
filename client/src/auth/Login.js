@@ -36,7 +36,8 @@ class Login extends Component {
 
   render() {
     let form = '';
-    if(this.props.user){
+    //if(this.props.user){
+      if(true){
       return (<Redirect to="/profile" />);
     }
     else {
