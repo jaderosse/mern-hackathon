@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import InsertShoes from './layout/Shoes/InsertShoes.js';
-import ShoesCollection from './layout/Shoes/ShoesCollection.js';
+import InsertShoes from './wardrobe/Shoes/InsertShoes.js';
+import ShoesCollection from './wardrobe/Shoes/ShoesCollection.js';
 import Weather from './Weather';
 
 class Profile extends Component {

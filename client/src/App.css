@@ -43,17 +43,17 @@ nav a:hover {
 }
 
 .space {
+  display: inline-block;
   margin: 15px 0;
   width: 100%;
-  max-width: 100%;
-  min-width: 80%;
 }
 
 .footer {
-  background-color: #555;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 20px;
+  background-color: #555;
 }
 
 .shoe-collection {
@@ -100,7 +100,7 @@ nav a:hover {
 .no-flash {
   visibility: hidden;
   padding: 10px 30px;
-  width: 75%;
+  width: 50%;
   margin: 10px auto;
 }
 

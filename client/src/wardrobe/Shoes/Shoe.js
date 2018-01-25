@@ -11,4 +11,4 @@ class Shoe extends Component {
   }
 }
 
-export default Shoe
+export default Shoe;
