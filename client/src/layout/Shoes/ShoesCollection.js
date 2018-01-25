@@ -6,7 +6,7 @@ class ShoesCollection extends Component {
   render() {
 
     const allShoes = this.props.shoes.map((item) => {
-     return <Shoe shoe={item}/>
+      return <Shoe shoe={item}/>
     })
 
     return (
