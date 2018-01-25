@@ -15,6 +15,7 @@ class Profile extends Component {
           <h2>HELLO AGAIN {this.props.user.name}!</h2>
           <h4>Your email is {this.props.user.email}</h4>
           <h3>Your location: {this.props.user.location}</h3>
+          <h3>Your shoes: {this.props.user.shoes}</h3>
           <InsertShoes />
         </div>);
     }
