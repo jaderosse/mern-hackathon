@@ -10,6 +10,7 @@ class Profile extends Component {
 
   componentDidMount = () => {
     this.weatherCheck();
+    this.shoeCheck();
   }
 
   weatherCheck = () => {
@@ -23,6 +24,14 @@ class Profile extends Component {
       }).catch((error) => {
         console.log('error', error);
       });
+  }
+
+  shoeCheck = () => {
+    if(this.state.temp > 50){
+      console.log('so cold!');
+    } else {
+      console.log('sandals it is!');
+    }
   }
 
   render(){
