@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 //import clothing components
-import Shoes from 'Shoes.js';
+import Shoes from './wardrobe/Shoes.js';
 
 class Wardrobe extends Component {
 	render() {
 		return (
 			<Router>
-				<div className="wardrobe">
-					<Route path="/shoes" component={Shoes} />
-					<Link to="/shoes">Shoes</Link>
+				<div>
+					<h4>Wardrobe</h4>
+					<div className="space">
+						<Route path="../wardrobe/shoes" component={Shoes} />
+						<Link to="/wardrobe/shoes">Shoes</Link>
+					</div>
 				</div>
 			</Router>
 		)
