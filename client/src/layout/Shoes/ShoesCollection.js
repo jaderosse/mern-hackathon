@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import Shoe from './Shoe';
 
 class ShoesCollection extends Component {
-  // const allShoes = this.props.shoes.map((item) => {
-  //   <Shoe shoe={item}/>
-  // })
+  
   render() {
+
+    const allShoes = this.props.shoes.map((item) => {
+     return <Shoe shoe={item}/>
+    })
+
     return (
-      <div>{console.log(this.props.shoes)}</div>
+      <div>
+        <ul>{allShoes}</ul>
+        <p>This is a test</p>
+      </div>
+      
+      
     )
   }
 
