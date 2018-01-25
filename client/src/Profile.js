@@ -14,7 +14,7 @@ class Profile extends Component {
           <h3>Your location: {this.props.user.location}</h3>
           <Weather user={this.props.user}/>
           
-          <InsertShoes />
+          <InsertShoes user={this.props.user}/>
           <ShoesCollection shoes={this.props.user.shoes}/>
         </div>);
     }

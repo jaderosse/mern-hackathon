@@ -4,7 +4,6 @@ import Shoe from './Shoe';
 class ShoesCollection extends Component {
   
   render() {
-
     const allShoes = this.props.shoes.map((item) => {
       return <Shoe shoe={item}/>
     })
@@ -12,10 +11,7 @@ class ShoesCollection extends Component {
     return (
       <div>
         <ul>{allShoes}</ul>
-        <p>This is a test</p>
       </div>
-      
-      
     )
   }
 
