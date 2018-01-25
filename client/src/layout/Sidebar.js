@@ -8,7 +8,7 @@ class Sidebar extends Component {
       sidebar = (
         <div className="sidebar">
           <Link to="/wardrobe"><strong>Wardrobe</strong></Link>
-          <Link to="/wardrobe/shoes">Shoes</Link>
+          <Link to="/wardrobe/shoes">   Shoes</Link>
         </div>);
     }
 

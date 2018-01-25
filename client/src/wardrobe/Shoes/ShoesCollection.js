@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Shoe from './Shoe';
+import Shoe from './Shoe.js';
 
 class ShoesCollection extends Component {
+  constructor(props) {
+    super(props);
+  }
   
   render() {
     const allShoes = this.props.shoes.map((item) => {
@@ -17,4 +20,4 @@ class ShoesCollection extends Component {
 
 }
 
-export default ShoesCollection
+export default ShoesCollection;

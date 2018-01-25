@@ -38,7 +38,7 @@ class InsertShoes extends Component{
 			<div>
 				<form className="shoe-form" onSubmit={this.handleSubmit}>
 					<label>Shoes Name</label>
-					<input type="text" name="id" value={this.state.id} onChange={this.handleChange} placeholder="ex 'red pumps'"></input>
+					<input type="text" name="id" value={this.state.id} onChange={this.handleChange} placeholder="ex 'red pumps'" />
 					<br />
 					<label>Comfort Level</label>
 					<select name="comfort" value={this.state.comfort} onChange={this.handleChange}>
@@ -74,7 +74,7 @@ class InsertShoes extends Component{
 					<br />
 					{/*<input type="text" name="shoe_type" value={this.state.shoe_type} onChange={this.handleChange} placeholder="boots, sandals,  moccasins"></input>*/}
 					<label>Link to image</label>
-					<input type="text" name="imgUrl" value={this.state.imgUrl} onChange={this.handleChange} placeholder="image url"></input>
+					<input type="text" name="imgUrl" value={this.state.imgUrl} onChange={this.handleChange} placeholder="image url" />
 					<br />
 					<input type="submit" />
 				</form>
@@ -86,4 +86,4 @@ class InsertShoes extends Component{
 	}
 }
 
-export default InsertShoes
+export default InsertShoes;

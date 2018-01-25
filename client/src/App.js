@@ -17,7 +17,7 @@ import Sidebar from './layout/Sidebar.js';
 
 import Wardrobe from './Wardrobe.js';
 //import clothing components
-import Shoes from './wardrobe/Shoes.js';
+import ShoesCollection from './wardrobe/Shoes/ShoesCollection.js';
 
 class App extends Component {
   constructor(props){
@@ -86,8 +86,8 @@ class App extends Component {
         <Router> 
           <div>
             <Nav user={this.state.user} />
-            <Sidebar />
             <div className="space">
+              <Sidebar user={this.state.user} />
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               <Route exact path="/" component={Home} />
               <Route path="/login" component={
@@ -98,7 +98,7 @@ class App extends Component {
                 () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
             </div>
             <Route path="/wardrobe" component={Wardrobe} />
-            <Route path="/wardrobe/shoes" component={Shoes} />
+            <Route path="/wardrobe/shoes" component={ShoesCollection} />
           </div>
         </Router>
         <Footer />
