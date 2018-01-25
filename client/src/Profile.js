@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import InsertShoes from './layout/Shoes/InsertShoes.js';
 import ShoesCollection from './layout/Shoes/ShoesCollection.js';
-class Profile extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      temp: ''
-    }
-  }
+import Weather from './Weather';
 
+<<<<<<< HEAD
   componentDidMount = () => {
     this.weatherCheck();
     this.shoeCheck();
@@ -34,18 +29,19 @@ class Profile extends Component {
       console.log('sandals it is!');
     }
   }
+=======
+class Profile extends Component {
+>>>>>>> 705dcfb078a5766aae870d1b58becaab192aa5fb
 
   render(){
   
     if(this.props.user && this.props.user.name){
       return (<div>
-
           <h2>HELLO AGAIN {this.props.user.name}!</h2>
           <h4>Your email is {this.props.user.email}</h4>
           <h3>Your location: {this.props.user.location}</h3>
-          <h3>Your shoes: {this.props.user.shoes}</h3>
+          <Weather user={this.props.user}/>
           
-          <h1>Temp: {this.state.temp}</h1>
           <InsertShoes />
           <ShoesCollection shoes={this.props.user.shoes}/>
         </div>);
