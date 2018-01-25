@@ -36,7 +36,8 @@ class Weather extends Component {
 
   render(){
     return (
-      <h1>Temp: {this.state.temp}</h1>
+      // <h1>Temp: {this.state.temp}</h1>
+      <h1>{Math.round(this.state.temp* 9/5 - 459.67)} °F</h1>
     )
   }
 }

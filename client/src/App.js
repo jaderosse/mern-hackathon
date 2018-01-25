@@ -2,13 +2,22 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
-import Flash from './layout/Flash.js';
-import Footer from './layout/Footer.js';
 import Home from './Home.js';
-import Nav from './layout/Nav.js';
-import Login from './auth/Login.js';
 import Profile from './Profile.js';
+
+//Auth
+import Login from './auth/Login.js';
 import Signup from './auth/Signup.js';
+
+//Layout
+import Nav from './layout/Nav.js';
+import Footer from './layout/Footer.js';
+import Flash from './layout/Flash.js';
+import Sidebar from './layout/Sidebar.js';
+
+import Wardrobe from './Wardrobe.js';
+//import clothing components
+import Shoes from './wardrobe/Shoes.js';
 
 class App extends Component {
   constructor(props){
@@ -77,6 +86,7 @@ class App extends Component {
         <Router> 
           <div>
             <Nav user={this.state.user} />
+            <Sidebar />
             <div className="space">
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               <Route exact path="/" component={Home} />
@@ -87,6 +97,8 @@ class App extends Component {
               <Route path="/profile" component={
                 () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
             </div>
+            <Route path="/wardrobe" component={Wardrobe} />
+            <Route path="/wardrobe/shoes" component={Shoes} />
           </div>
         </Router>
         <Footer />
