@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
 import InsertShoes from './layout/Shoes/InsertShoes.js';
 class Profile extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      temp: ''
+    }
+  }
 
-  weatherCheck = (e) => {
-    e.preventDefault();
-    let weatherUrl = 'http://api.wunderground.com/api/af1c838078e4bd8f/conditions/q/' + this.props.user.location + '.json';
+  componentDidMount = () => {
+    this.weatherCheck();
+  }
+
+  weatherCheck = () => {
+    const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + this.props.user.location + ',us&appid=8a8b7899a71e133a0af9805244c61e66';
     console.log(weatherUrl);
-  } 
+    fetch(weatherUrl)
+      .then((response) => {
+        return response.json()
+      }).then((json) => {
+        this.setState({temp: json.main.temp});
+      }).catch((error) => {
+        console.log('error', error);
+      });
+  }
 
   render(){
 
@@ -16,6 +33,7 @@ class Profile extends Component {
           <h4>Your email is {this.props.user.email}</h4>
           <h3>Your location: {this.props.user.location}</h3>
           <h3>Your shoes: {this.props.user.shoes}</h3>
+          <h1>Temp: {this.state.temp}</h1>
           <InsertShoes />
         </div>);
     }
