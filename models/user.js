@@ -29,7 +29,7 @@ var userSchema = new mongoose.Schema({
     {
       id: String,
       comfort: String,
-      waterproof: Boolean,
+      waterproof: String,
       shoe_type: String,
       imgUrl: String
     }
